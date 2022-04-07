@@ -1,4 +1,4 @@
-# audioswitch
+# EreTIk's Interface
 "Undocumented COM-interface IPolicyConfig."
 
 # Note
