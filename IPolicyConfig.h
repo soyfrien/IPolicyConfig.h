@@ -109,11 +109,6 @@ interface IPolicyConfigVista : public IUnknown
 {
 public:
 
-	virtual HRESULT GetMixFormat(
-		PCWSTR,
-		WAVEFORMATEX**
-	);  // not available on Windows 7, use method from IPolicyConfig
-
 	virtual HRESULT STDMETHODCALLTYPE GetDeviceFormat(
 		PCWSTR,
 		INT,
@@ -125,28 +120,6 @@ public:
 		WAVEFORMATEX*,
 		WAVEFORMATEX*
 	);
-
-	virtual HRESULT STDMETHODCALLTYPE GetProcessingPeriod(
-		PCWSTR,
-		INT,
-		PINT64,
-		PINT64
-	);  // not available on Windows 7, use method from IPolicyConfig
-
-	virtual HRESULT STDMETHODCALLTYPE SetProcessingPeriod(
-		PCWSTR,
-		PINT64
-	);  // not available on Windows 7, use method from IPolicyConfig
-
-	virtual HRESULT STDMETHODCALLTYPE GetShareMode(
-		PCWSTR,
-		struct DeviceShareMode*
-	);  // not available on Windows 7, use method from IPolicyConfig
-
-	virtual HRESULT STDMETHODCALLTYPE SetShareMode(
-		PCWSTR,
-		struct DeviceShareMode*
-	);  // not available on Windows 7, use method from IPolicyConfig
 
 	virtual HRESULT STDMETHODCALLTYPE GetPropertyValue(
 		PCWSTR,
@@ -164,9 +137,4 @@ public:
 		__in PCWSTR wszDeviceId,
 		__in ERole eRole
 	);
-
-	virtual HRESULT STDMETHODCALLTYPE SetEndpointVisibility(
-		PCWSTR,
-		INT
-	);  // not available on Windows 7, use method from IPolicyConfig
 };
